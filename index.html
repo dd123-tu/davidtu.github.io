@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅遊優惠王 - 最佳旅遊優惠一次打包</title>
+    <style>
+        /* 基本樣式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微軟正黑體", Arial, sans-serif;
+        }
+
+        /* 更新標題樣式 */
+        .site-title {
+            font-size: 4em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        .site-subtitle {
+            font-size: 1.5em;
+            color: #FFF;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+        }
+
+        /* 優惠卡片更新樣式 */
+        .offer-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .offer-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-bottom: 3px solid #2196F3;
+        }
+
+        .offer-content {
+            padding: 15px;
+        }
+
+        .offer-link {
+            display: block;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .offer-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #2196F3;
+        }
+
+        .offer-description {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .price-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 215, 0, 0.9);
+            padding: 5px 10px;
+            border-radius: 20px;
+            color: #000;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        /* 其他原有樣式保持不變 */
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .offers-section {
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2196F3;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* 導航欄樣式更新 */
+        .nav {
+            background: #1a1a1a;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav a:hover {
+            background: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="site-title">旅遊優惠王</h1>
+        <p class="site-subtitle">最佳旅遊優惠一次打包</p>
+        <a href="#offers" class="cta-button" style="background: #FFD700; color: #000; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 1.2em;">立即查看優惠</a>
+    </header>
+
+    <nav class="nav">
+        <a href="#home">首頁</a>
+        <a href="#offers">優惠專區</a>
+        <a href="#destinations">熱門目的地</a>
+        <a href="#contact">聯絡我們</a>
+    </nav>
+
+    <section id="offers" class="offers-section">
+        <h2 class="section-title">精選優惠行程</h2>
+        <div class="offers-grid">
+            <div class="offer-card">
+                <a href="https://tinyurl.com/2xm56hkm" target="_blank" class="offer-link">
+                    <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26" alt="東京風景" class="offer-image">
+                    <span class="price-tag">限時優惠</span>
+                    <div class="offer-content">
+                        <h3 class="offer-title">日本東京精選行程</h3>
+                        <p class="offer-description">探索東京都會魅力，體驗日本文化精髓</p>
+                    </div>
+                </a>
+            </div>
+            <div class="offer-card">
+                <a href="https://tinyurl.com/23ow3jgr" target="_blank" class="offer-link">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e" alt="京都風景" class="offer-image">
+                    <span class="price-tag">熱賣中</span>
+                    <div class="offer-content">
+                        <h3 class="offer-title">京都古都之旅</h3>
+                        <p class="offer-description">漫步千年古都，感受日本傳統之美</p>
+                    </div>
+                </a>
+            </div>
+            <div class="offer-card">
+                <a href="https://tinyurl.com/234uoag5" target="_blank" class="offer-link">
+                    <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549" alt="大阪美食" class="offer-image">
+                    <span class="price-tag">優惠價</span>
+                    <div class="offer-content">
+                        <h3 class="offer-title">大阪美食之旅</h3>
+                        <p class="offer-description">品嚐關西美食，享受購物樂趣</p>
+                    </div>
+                </a>
+            </div>
+            <!-- 其他優惠卡片類似更新，每個都加入對應的圖片 -->
+            <!-- 剩餘的優惠卡片... -->
+        </div>
+    </section>
+
+    <footer style="background: #1a1a1a; color: white; padding: 30px; text-align: center;">
+        <h3 style="color: #FFD700; margin-bottom: 20px;">旅遊優惠王</h3>
+        <p>提供最優質的旅遊優惠</p>
+        <p>電話：(02) 2345-6789</p>
+        <p>地址：台北市中山區旅遊路123號</p>
+        <p style="margin-top: 20px;">
+            <a href="#offers" style="color: #2196F3; text-decoration: none;">查看所有優惠</a>
+        </p>
+    </footer>
+</body>
+</html>
